@@ -28,8 +28,20 @@ class movieController{
             .catch(err => {
                 res.status(500).json(err)
             })
-        
-        
+    }
+
+    static review(req, res){
+        console.log(req.params.title)
+        axios.get('https://api.nytimes.com/svc/movies/v2/reviews/search.json?', {
+            params: {
+                "query": req.params.title,
+                "api-key": process.env.NYTAPIKey
+            }
+        }).then(data => {
+            res.status(200).json(data.data)
+        }).catch(err => {
+            res.status(500).json(err)
+        })
     }
 }
 

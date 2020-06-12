@@ -10,6 +10,7 @@ route.post('/login', userController.login)
 
 route.get('/question', questionController.show)
 route.get('/movie', movieController.show)
+route.get('/movie/review/:title', movieController.review)
 
 
 module.exports = route
