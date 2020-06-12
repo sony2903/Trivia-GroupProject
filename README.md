@@ -15,9 +15,11 @@ Member :
 ------------
 
 3rd Party API :
-> - OpenTriviaDB
+> 
+- OpenTriviaDB
 - TheMovieDB
 - OMDB
+- NYT Movie Review
 
 ------------
 
@@ -266,5 +268,60 @@ Response
     "Website": "N/A",
     "Response": "True"
 }}
+
+------------
+
+GET : /movie/review/:title
+
+**Req params**
+>{
+title:
+}
+
+
+**Response**
+>**200 OK**
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2020 The New York Times Company. All Rights Reserved.",
+    "has_more": false,
+    "num_results": 2,
+    "results": [
+        {
+            "display_title": "The Avengers",
+            "mpaa_rating": "PG-13",
+            "critics_pick": 0,
+            "byline": "By A.&#160;O. SCOTT",
+            "headline": "Superheroes, Super Battles, Super Egos",
+            "summary_short": "Joss Whedon’s long-awaited superhero opus “The Avengers” arrives with a big cast, frequent battles and abundant banter among its characters.",
+            "publication_date": "2012-05-03",
+            "opening_date": "2012-05-04",
+            "date_updated": "2017-11-02 04:18:15",
+            "link": {
+                "type": "article",
+                "url": "http://www.nytimes.com/2012/05/04/movies/robert-downey-jr-in-the-avengers-directed-by-joss-whedon.html",
+                "suggested_link_text": "Read the New York Times Review of The Avengers"
+            },
+            "multimedia": null
+        },
+        {
+            "display_title": "The Avengers",
+            "mpaa_rating": "PG-13",
+            "critics_pick": 0,
+            "byline": "JANET MASLIN",
+            "headline": "Avengers, the (Movie)",
+            "summary_short": "British agents vs. villain with weather machine. Big-time flop.",
+            "publication_date": "1998-08-15",
+            "opening_date": "1998-08-14",
+            "date_updated": "2017-11-02 04:17:55",
+            "link": {
+                "type": "article",
+                "url": "http://www.nytimes.com/1998/08/15/movies/film-review-shh-they-re-trying-not-to-be-noticed.html",
+                "suggested_link_text": "Read the New York Times Review of The Avengers"
+            },
+            "multimedia": null
+        }
+    ]
+}
 
 
