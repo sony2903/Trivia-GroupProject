@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Movie Trivia!</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body>
+    <section class="main-page"></section>
+
+    <section class="login-page">
+      <div class="container h-100" style="margin-top: 150px;">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-7">
+            <h2 class="text-center" style="color: rgb(255, 255, 255);">Login Movie Trivia</h2>
+            <form method="POST" onsubmit="login(event)">
+              <div class="form-group"><input class="form-control" type="email" placeholder="Email" name="email" /></div>
+              <div class="form-group">
+                <input class="form-control" type="password" placeholder="Password" name="password" />
+              </div>
+              <div class="form-group text-center">
+                <button class="btn btn-primary" type="submit">Login</button>
+              </div>
+            </form>
+            <a
+              class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-xl-center align-items-xl-center"
+              onclick="registerPage()"
+              style="color: rgb(255, 255, 255);"
+              >Don't have an accounts? Register here!</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="register-page">
+      <div class="container h-100" style="margin-top: 150px;">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-7">
+            <h2 class="text-center" style="color: rgb(255, 255, 255);">Register Movie Trivia</h2>
+            <form method="POST" onsubmit="register(event)">
+              <div class="form-group"><input class="form-control" type="text" placeholder="Email" name="email" /></div>
+              <div class="form-group">
+                <input class="form-control" type="password" placeholder="Password" name="password" />
+              </div>
+              <div class="form-group text-center">
+                <button class="btn btn-success" type="submit">Register</button>
+              </div>
+            </form>
+            <a
+              class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-xl-center align-items-xl-center"
+              onclick="auth()"
+              style="color: rgb(255, 255, 255);"
+              >Already have an accounts? Login here!</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
