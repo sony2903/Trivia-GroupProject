@@ -271,6 +271,8 @@ POST : /googleSign
 
 Response (200) OK
 
+{"email":"pairprojectphase1@gmail.com","id":1,"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwYWlycHJvamVjdHBoYXNlMUBnbWFpbC5jb20iLCJpYXQiOjE1OTE5NDU5MjB9.u4BD5WnRA-UjMkxbKYhP6wqDvaDRSW9TfhASS4VyACM"}
+
 {
   iss: 'accounts.google.com',
   azp: '664905079173-e2t6e2tf0op8ci03rs5pnb2a6h5aeqvl.apps.googleusercontent.com',
