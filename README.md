@@ -185,7 +185,7 @@ Response
 
 ------------
 
-GET : /movie
+**GET : /movie**
 
 Response
 > **200 OK**
@@ -271,7 +271,7 @@ Response
 
 ------------
 
-GET : /movie/review/:title
+**GET : /movie/review/:title**
 
 **Req params**
 >{
