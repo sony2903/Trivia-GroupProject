@@ -1,4 +1,5 @@
 const axios = require('axios')
+require('dotenv').config()
 
 class movieController{
     static show (req,res) {
@@ -7,7 +8,7 @@ class movieController{
         var film = {}
             axios.get(`https://api.themoviedb.org/3/discover/movie?`, {
                 params: {
-                    api_key: '5182b94d862b722b16c7c4930eeb14a2',
+                    api_key: process.env.themoviedbAPIKey,
                     language: 'en-US',
                     sort_by: 'popularity.desc',
                     page: randomPage
