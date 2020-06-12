@@ -51,7 +51,7 @@ class userController{
         console.log("google sign in server")
         let {id_token} = req.body
         let email = null
-        console.log(id_token + "ID TOKENN SERVER")
+        console.log(id_token + " ID TOKENN SERVER")
         const client = new OAuth2Client("664905079173-e2t6e2tf0op8ci03rs5pnb2a6h5aeqvl.apps.googleusercontent.com");
         client.verifyIdToken({
             idToken: id_token,
@@ -59,7 +59,7 @@ class userController{
         })
         .then((ticket) =>{
             const payload = ticket.getPayload()
-            console.log(payload)
+            console.log(JSON.stringify(payload) + " ini payload")
             email = ticket.getPayload().email
             return User.findOne({
                 where: {

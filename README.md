@@ -22,7 +22,6 @@ Member :
 ------------
 
 
-
 API Documentation
 
 **POST : /register**
@@ -268,3 +267,24 @@ Response
 }}
 
 
+POST : /googleSign
+
+Response (200) OK
+
+{
+  iss: 'accounts.google.com',
+  azp: '664905079173-e2t6e2tf0op8ci03rs5pnb2a6h5aeqvl.apps.googleusercontent.com',
+  aud: '664905079173-e2t6e2tf0op8ci03rs5pnb2a6h5aeqvl.apps.googleusercontent.com',
+  sub: '111222303667141916333',
+  email: 'pairprojectphase1@gmail.com',
+  email_verified: true,
+  at_hash: 'MYH0pVubNLpX_Wo7DyZ6IA',
+  name: 'pair project',
+  picture: 'https://lh6.googleusercontent.com/-HiM3g68hz4k/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckekihkGtJ5s5GhPIBwOgAWY-cvJA/s96-c/photo.jpg',
+  given_name: 'pair',
+  family_name: 'project',
+  locale: 'id',
+  iat: 1591943731,
+  exp: 1591947331,
+  jti: '2ea025a968bcf8e536a5106da9abec853d18ea7d'
+}

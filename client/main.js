@@ -63,7 +63,7 @@ function onSignIn(googleUser) {
         data: { id_token }
     })
         .done(({data})=>{
-            console.log(data + ">>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<");
+            console.log(JSON.stringify(data) + ">>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<");
             localStorage.setItem('token', data.access_token)
             auth()
         })
