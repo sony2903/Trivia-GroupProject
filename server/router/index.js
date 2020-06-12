@@ -1,5 +1,4 @@
-var express = require('express')
-var route = express()
+const route = require('express').Router()
 const questionController = require('../controllers/questionController')
 const movieController = require('../controllers/movieController')
 const userController = require('../controllers/userController')
@@ -10,6 +9,8 @@ route.post('/login', userController.login)
 
 route.get('/question', questionController.show)
 route.get('/movie', movieController.show)
+
+route.post('/googleSign', userController.googleSign)
 
 
 module.exports = route
