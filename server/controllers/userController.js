@@ -23,13 +23,13 @@ class userController{
             email: req.body.email,
             password: req.body.password
         }
-        if(!dataX.email){
+        if(dataX.email == undefined || dataX.password == undefined) {
             res.status(404).json({message: 'Wrong Username/Password'})
-        } else{
+        } else {
             User.findOne({where: {email: dataX.email}})
             .then(data => {
                 console.log(data)
-                if(!data.data){
+                if(!data){
                     res.status(404).json({message: 'Wrong Username/Password'})
                 } else if(!compare(dataX.password, data.password)){
                     res.status(404).json({message: 'Wrong Username/Password'})
@@ -41,7 +41,7 @@ class userController{
             .catch(err => {
                 res.status(400).json(err)
             })
-        }
+        }        
     }
 
     
