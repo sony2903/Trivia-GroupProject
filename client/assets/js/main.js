@@ -36,6 +36,23 @@ function login(event) {
     });
 }
 
+function onSignIn(googleUser) {
+  let id_token = googleUser.getAuthResponse().id_token;
+  $.ajax({
+    method: 'post',
+    url: baseUrl + '/googleSign',
+    data: { id_token },
+  })
+    .done(({ data }) => {
+      console.log(data + '>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<');
+      localStorage.setItem('token', data.access_token);
+      auth();
+    })
+    .fail((err) => {
+      console.log(JSON.stringify(err) + 'error');
+    });
+}
+
 function registerPage() {
   $('section').hide();
   $('.register-page').show();
@@ -61,6 +78,10 @@ function register(event) {
 function logout() {
   localStorage.clear();
   auth();
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    console.log('User signed out.');
+  });
 }
 
 function getQuestion() {
